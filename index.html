@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📦 Inventory Management System</h1>
+</header>
+
+<nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Products</a>
+</nav>
+
+<div class="container">
+
+    <!-- Form -->
+    <div class="card">
+        <h2>Add / Update Product</h2>
+        <form id="productForm">
+            <input type="hidden" id="productId">
+
+            <input type="text" id="name" placeholder="Product Name" required>
+            <input type="number" id="quantity" placeholder="Quantity" required>
+            <input type="number" id="price" placeholder="Price (₹)" required>
+
+            <button type="submit" id="submitBtn">Add Product</button>
+        </form>
+    </div>
+
+    <!-- Search -->
+    <div class="card">
+        <h2>Search Product</h2>
+        <input type="text" id="search" placeholder="Search by name...">
+    </div>
+
+    <!-- Table -->
+    <div class="card">
+        <h2>Product List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
